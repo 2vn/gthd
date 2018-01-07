@@ -1,4 +1,5 @@
 <?php
+if (!$_GET[id]) {header('Location: index.php');exit;}
 function auto($url){
    $curl = curl_init();
    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
