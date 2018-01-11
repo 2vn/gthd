@@ -1,7 +1,7 @@
 <?php
 /**CuiBapVH@Gmail.Com**/
 /**06/01/2018**/
-/**Update 10/01/2018**/
+/**Updated 10/01/2018**/
 function auto($url){
    $curl = curl_init();
    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -19,7 +19,7 @@ $temp=strstr($curl, '<h5 class="text-blue text-bold">Tổng số: <span class="t
 $temp1 = strstr($temp,'<footer>');
 //echo $temp1;
 $noidung = str_replace($temp1,'',$temp);
-echo'<title>Giao Thông Học Đường</title><link href="http://stc.giaothonghocduong.com.vn/files/css/bootstrap/css/bootstrap.css" rel="stylesheet">
+echo'<html><title>*.Danh Sách Thí Sinh.*</title><link href="http://stc.giaothonghocduong.com.vn/files/css/bootstrap/css/bootstrap.css" rel="stylesheet">
 <link href="http://stc.giaothonghocduong.com.vn/files/css/Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
 <link href="http://stc.giaothonghocduong.com.vn/files/css/ionicons/css/ionicons.min.css" rel="stylesheet">
 <link href="http://stc.giaothonghocduong.com.vn/files/js/owl.carousel/owl.carousel.min.css" rel="stylesheet">
@@ -27,3 +27,4 @@ echo'<title>Giao Thông Học Đường</title><link href="http://stc.giaothongh
 <link href="http://stc.giaothonghocduong.com.vn/themes/v1/files/css/giaothong_style.css?v=3.6" rel="stylesheet">';
 $noidung=str_replace('<a class="text-bold no-hover" href="/giaothong/site/result-user/','<a class="text-bold no-hover" href="/ketqua/',$noidung);
 echo $noidung;
+echo'<!--Coded By CuiBapVH--><!--Liên Hệ: CuiBapVH@Gmail.Com--></html>';
