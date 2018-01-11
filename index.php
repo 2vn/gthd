@@ -12,8 +12,8 @@ curl_setopt($curl,CURLOPT_TIMEOUT,6);
    curl_close($curl);
    return $ch;
 }
-if (isset($_GET['page'])) $page=$_GET['page']; else $page=1;
-if (isset($_GET['lop'])) $class=$_GET['lop']; else $class=11;
+if (isset($_GET['page'])) $page=(int)$_GET['page']; else $page=1;
+if (isset($_GET['lop'])) $class=(int)$_GET['lop']; else $class=11;
 $curl=auto("http://giaothonghocduong.com.vn/danh-sach-thi-sinh.html?round=&user_name=&full_name=&region=bac&city_id=35&district_id=404&level=&school_id=30008&class_id=$class&page=$page&per-page=50");
 $temp=strstr($curl, '<h5 class="text-blue text-bold">Tổng số: <span class="text-error text-bold text-17">');
 $temp1 = strstr($temp,'<footer>');
